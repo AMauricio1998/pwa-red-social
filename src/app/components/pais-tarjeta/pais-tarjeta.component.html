@@ -1,0 +1,19 @@
+
+
+<div class="card" style="width: 18rem;">
+    <img [src]="pais.flags.png" alt="pais" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{ pais.name.official }}</h5>
+        <p class="card-text">Informacion general</p>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Capital: {{ pais.capital }}</li>
+            <li class="list-group-item">Region: {{ pais.region }}</li>
+            <li class="list-group-item">Poblacion {{ pais.population }}</li>
+        </ul>
+
+        <div class="d-grid gap-2">
+            <a [routerLink]="['/detallePais', pais.name.official]" class="btn btn-primary">Detalle</a>
+        </div>
+    </div>
+</div>

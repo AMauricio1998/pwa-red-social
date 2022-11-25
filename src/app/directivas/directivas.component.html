@@ -1,0 +1,44 @@
+<p>directivas works!</p>
+
+
+
+<div class="container mt-2 mb-1">
+    <div class="row">
+        <div class="col-sm">
+            <h2>*ngif</h2>
+            <div class="alert alert-primary" role="alert" *ngIf="mostrarMensaje">
+                true 1
+            </div>
+            <div class="alert alert-secondary" role="alert" *ngIf="!mostrarMensaje">
+                false 2
+            </div>
+            <button class="btn btn-primary" (click)="mostrarMensaje = !mostrarMensaje" type="button" class="btn btn-dark">Cambiar mensaje</button>
+        </div>
+        <div class="col-sm">
+            <h2>*ngFor</h2>
+            <div>
+                <ul class="list-group" *ngFor="let materia of materias; first as isFirst">
+                    <li [ngClass]=" isFirst ? 'list-group-item active' : 'list-group-item'">{{materia}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm">
+            <h2>switch</h2>
+            <container-element [ngSwitch]="contador % 2">
+                <div class="card" *ngSwitchCase="0">
+                    <div class="card-body">
+                        Numero par {{contador}}
+                    </div>
+                </div>
+    
+                <div class="card" *ngSwitchCase="1">
+                    <div class="card-body">
+                        Numero Impar {{contador}}
+                    </div>
+                </div>
+            </container-element>
+
+            <button (click)="contador = contador + 1" type="button" class="btn btn-dark mt-2">Incrementar</button>
+        </div>
+    </div>
+</div>

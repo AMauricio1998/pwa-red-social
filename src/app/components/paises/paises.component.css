@@ -1,0 +1,6 @@
+.card-pais {
+    column-gap: 1px;
+    margin: 2px 4px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

@@ -1,0 +1,29 @@
+<div class="container-card">
+    <h1>{{ pais[0].nativeName }}</h1>
+    <hr>
+    <div class="row">
+        <div class="col-sm">
+            <img [src]="pais[0].flags.png" alt="pais">
+            <br>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Subregion: {{ pais[0].subregion }}</li>
+                <li class="list-group-item">Region: {{ pais[0].region }}</li>
+                <li class="list-group-item">Poblacion: {{ pais[0].population }}</li>
+                <li class="list-group-item">Independent:
+                    <div class="alert alert-primary" role="alert" *ngIf="pais[0].independent;else no">
+                        <span>Independiente</span>
+                    </div>
+                    <ng-template #no>
+                        <span class="alert alert-danger" role="alert">No Independiente</span>
+                    </ng-template>
+                </li>
+
+            </ul>
+
+            <div class="d-grid gap-2" style="margin-top: 1rem;">
+                <button class="btn btn-primary btn-lg btn-block" routerLink="/paises">Regresar</button>
+            </div>
+        </div>
+    </div>
+</div>

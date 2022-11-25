@@ -1,0 +1,15 @@
+<h1>Materias, <small> semestre {{ semestreSeleccionado }}</small></h1>
+<hr>
+
+<div class="row">
+    <div class="col-sm-4" *ngFor="let materia of materias">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="materia.imagen" alt="UTVT">
+            <div class="card-body">
+                <h5 class="card-title">{{ materia.cuatrimestre }}° Cuatrimestre</h5>
+                <p class="card-text text-justify">{{ materia.materias }}</p>
+                <h6><small>{{ materia.fecha | date : 'dd/MM/YYYY' }}</small></h6>
+            </div>
+        </div>
+    </div>
+</div>
