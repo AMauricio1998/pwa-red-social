@@ -6,6 +6,7 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { MateriasComponent } from './materias/materias.component';
 import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.component';
 import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
   { path: 'home', component: BodyComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'materias', component: MateriasComponent},
   {path: 'paises', component: PaisesComponent},
   {path: 'detallePais/:id', component: PaisDetalleComponent},
+  {path: 'usuarios', component: UsuariosComponent},
   {path: 'nuevoUsuario', component: NuevoUsuarioComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];

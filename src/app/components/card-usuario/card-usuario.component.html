@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+    <img *ngIf="usuario.gender == 1" src="assets/images/hombre.png" alt="pais" class="card-img-top">
+    <img *ngIf="usuario.gender == 0" src="assets/images/mujer.png" alt="pais" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{ usuario.firstname }}</h5>
+        <p class="card-text">Informacion general</p>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Apellido: {{ usuario.lastname }}</li>
+            <li class="list-group-item">Email: {{ usuario.email }}</li>
+            <li class="list-group-item">Edad {{ usuario.age }}</li>
+            <li class="list-group-item" *ngIf="usuario.gender == 1">Genero: Hombre</li>
+            <li class="list-group-item" *ngIf="usuario.gender == 0">Genero: Mujer</li>
+        </ul> 
+</div>

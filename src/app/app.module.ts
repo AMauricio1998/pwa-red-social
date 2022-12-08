@@ -18,6 +18,8 @@ import { CommonModule } from '@angular/common';
 import { PaisDetalleComponent } from './components/pais-detalle/pais-detalle.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { CardUsuarioComponent } from './components/card-usuario/card-usuario.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.
     NuevoUsuarioComponent,
     PaisesComponent,
     PaisTarjetaComponent,
-    PaisDetalleComponent
+    PaisDetalleComponent,
+    UsuariosComponent,
+    CardUsuarioComponent
   ],
   imports: [
     CommonModule,
